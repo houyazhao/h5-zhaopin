@@ -32,3 +32,29 @@ var mySwiper = new Swiper('.swiper-container', {
         }
     },
 });
+//百度地图
+var map = new BMap.Map("allmap");
+var point = new BMap.Point(120.181756, 30.29542);
+var marker = new BMap.Marker(point);
+map.addOverlay(marker);
+map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用
+map.enableContinuousZoom(); //启用地图惯性拖拽，默认禁用
+map.centerAndZoom(point, 19);
+
+function LoadInfoWindow(marker, infoWindow) {
+    document.getElementById('imgDemo').onload = function() {
+        infoWindow.redraw();
+    }
+};
+
+//音乐开始/结束
+$("#audioBtn").click(function() {
+    var Audio = $("#play")[0];
+    if ($(this).hasClass('rotate')) {
+        Audio.pause();
+        $(this).removeClass('rotate');
+    } else {
+        Audio.play();
+        $(this).addClass('rotate');
+    }
+})

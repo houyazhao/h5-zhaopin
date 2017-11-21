@@ -3,6 +3,38 @@ html {
   width: 100%;
   height: 100%; }
 
+@-webkit-keyframes rotating {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+@keyframes rotating {
+  0% {
+    transform: rotate(0); }
+  100% {
+    transform: rotate(360deg); } }
+
+@-webkit-keyframes enlarge {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }
+
+@keyframes enlarge {
+  0% {
+    transform: scale(0); }
+  50% {
+    transform: scale(1.5); }
+  100% {
+    transform: scale(1); } }
+
+.enlarge {
+  -webkit-animation-name: enlarge;
+  animation-name: enlarge; }
+
 @-webkit-keyframes start {
   0%,
   30% {
@@ -46,45 +78,64 @@ img {
   width: 100%;
   height: 100%;
   background: #fff; }
+  .swiper-container .audio_btn {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    top: 20px;
+    right: 20px;
+    background: url(./../images/normalMusic.svg) no-repeat;
+    background-size: contain;
+    z-index: 10;
+    transform: rotate(360deg); }
+    .swiper-container .audio_btn audio {
+      visibility: hidden; }
+    .swiper-container .audio_btn.rotate {
+      animation: 1.5s rotating linear infinite;
+      -webkit-animation: 1.5s rotating linear infinite; }
   .swiper-container #array {
     position: fixed;
     left: 50%;
-    margin-left: -0.1rem;
+    margin-left: -0.25rem;
     bottom: 100px;
-    width: 0.3rem;
-    height: 0.20rem;
+    width: 0.5rem;
+    height: 0.4rem;
     z-index: 999;
     animation: start 1.5s infinite ease-in-out;
     -webkit-animation: start 1.5s infinite ease-in-out; }
   .swiper-container .swiper-slide {
     width: 100%;
     height: 100%;
+    position: relative;
     background: url("./../images/bg.png") no-repeat left top;
-    background-size: 100% 100%;
-    position: relative; }
+    background-size: 100% 100%; }
     .swiper-container .swiper-slide.swiper-slide1 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
       height: 11.7rem;
       background-size: 100% 100%;
-      margin: 0.69rem auto 0;
+      margin: 0.5rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide1 .container-bg .content {
         width: 88%;
         background: url("./../images/content-border.png") no-repeat center;
         margin: 0 auto;
-        background-size: 100%;
-        height: 6.83rem; }
+        background-size: 90% 80%;
+        height: 6.83rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around; }
         .swiper-container .swiper-slide.swiper-slide1 .container-bg .content h2 {
           color: #F7D34C;
           font-weight: bold;
           font-size: 0.50rem;
           text-align: center; }
         .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row {
-          text-align: center; }
+          text-align: center;
+          height: 1.20rem; }
           .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row img {
-            width: 1.51rem;
-            height: 1.51rem;
+            width: 1.20rem;
+            height: 1.20rem;
             display: inline-block; }
         .swiper-container .swiper-slide.swiper-slide1 .container-bg .content h3 {
           color: #F7D34C;
@@ -92,31 +143,28 @@ img {
           text-align: center; }
     .swiper-container .swiper-slide.swiper-slide1 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 4.5rem; }
       .swiper-container .swiper-slide.swiper-slide1 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img1 {
-          bottom: -1.5rem;
           left: -1rem;
           width: 4.18rem; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 0;
-          width: 5.18rem;
+          left: -0.2rem;
+          width: 5rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img3 {
-          bottom: -1.5rem;
-          left: 2.5rem;
+          right: -0.8rem;
           width: 5.37rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img4 {
-          bottom: -2.5rem;
-          left: 3.5rem;
-          width: 6.11rem; }
+          right: -2.2rem;
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img5 {
           bottom: 0;
-          left: 0.5rem;
           width: 4.11rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide2 .container-bg {
@@ -154,31 +202,28 @@ img {
         margin-top: 0.1rem; }
     .swiper-container .swiper-slide.swiper-slide2 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 4.5rem; }
       .swiper-container .swiper-slide.swiper-slide2 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img1 {
-          bottom: -2.5rem;
           left: -1rem;
           width: 4.18rem; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img2 {
-          bottom: -2.5rem;
-          left: 0;
-          width: 5.18rem;
+          left: -0.2rem;
+          width: 5rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img3 {
-          bottom: -2.5rem;
-          left: 2.5rem;
+          right: -0.8rem;
           width: 5.37rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img4 {
-          bottom: -3.5rem;
-          left: 3.5rem;
-          width: 6.11rem; }
+          right: -2.2rem;
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img5 {
           bottom: 0;
-          left: 4.5rem;
           width: 4.11rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide3 .container-bg {
@@ -194,7 +239,7 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide3 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.2rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide3 .container-bg ul {
@@ -227,31 +272,28 @@ img {
             background-size: 100% auto; }
     .swiper-container .swiper-slide.swiper-slide3 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 4.5rem; }
       .swiper-container .swiper-slide.swiper-slide3 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img1 {
-          bottom: -2.5rem;
           left: -1rem;
           width: 4.18rem; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img2 {
-          bottom: -2.5rem;
-          left: 0;
-          width: 5.18rem;
+          left: -0.2rem;
+          width: 5rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img3 {
-          bottom: -2.5rem;
-          left: 2.5rem;
+          right: -0.8rem;
           width: 5.37rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img4 {
-          bottom: -3.5rem;
-          left: 3.5rem;
-          width: 6.11rem; }
+          right: -2.2rem;
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img5 {
           bottom: 0;
-          left: -0.5rem;
           width: 4.11rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide4 .container-bg {
@@ -267,7 +309,7 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide4 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.20rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide4 .container-bg ul {
@@ -291,24 +333,24 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.25rem; }
+        font-size: 0.24rem;
+        position: relative;
+        z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide4 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 6.0rem; }
       .swiper-container .swiper-slide.swiper-slide4 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide4 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 4rem;
-          width: 5.18rem;
-          z-index: 100;
-          transform: rotateY(180deg); }
+          right: -2rem;
+          width: 5.18rem; }
         .swiper-container .swiper-slide.swiper-slide4 .man-item img.img5 {
-          bottom: 0;
-          left: 4rem;
-          width: 4.11rem;
-          z-index: 101; }
+          bottom: -0.5rem;
+          right: -1rem;
+          width: 4.11rem; }
     .swiper-container .swiper-slide.swiper-slide5 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
@@ -322,7 +364,7 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide5 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.20rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide5 .container-bg ul {
@@ -346,24 +388,24 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.25rem; }
+        font-size: 0.24rem;
+        position: relative;
+        z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide5 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 6.0rem; }
       .swiper-container .swiper-slide.swiper-slide5 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide5 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 4rem;
-          width: 5.18rem;
-          z-index: 100;
-          transform: rotateY(180deg); }
+          right: -2rem;
+          width: 5.18rem; }
         .swiper-container .swiper-slide.swiper-slide5 .man-item img.img5 {
-          bottom: 0;
-          left: 4rem;
-          width: 4.11rem;
-          z-index: 101; }
+          bottom: -0.5rem;
+          right: -1rem;
+          width: 4.11rem; }
     .swiper-container .swiper-slide.swiper-slide6 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
@@ -377,7 +419,7 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide6 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.20rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide6 .container-bg ul {
@@ -401,24 +443,24 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.25rem; }
+        font-size: 0.24rem;
+        position: relative;
+        z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide6 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 6.0rem; }
       .swiper-container .swiper-slide.swiper-slide6 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide6 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 4rem;
-          width: 5.18rem;
-          z-index: 100;
-          transform: rotateY(180deg); }
+          right: -2rem;
+          width: 5.18rem; }
         .swiper-container .swiper-slide.swiper-slide6 .man-item img.img5 {
-          bottom: 0;
-          left: 4rem;
-          width: 4.11rem;
-          z-index: 101; }
+          bottom: -0.5rem;
+          right: -1rem;
+          width: 4.11rem; }
     .swiper-container .swiper-slide.swiper-slide7 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
@@ -432,7 +474,7 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide7 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.20rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide7 .container-bg ul {
@@ -456,24 +498,24 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.25rem; }
+        font-size: 0.24rem;
+        position: relative;
+        z-index: 100000; }
     .swiper-container .swiper-slide.swiper-slide7 .man-item {
       position: absolute;
-      bottom: 0; }
+      bottom: 0;
+      width: 100%;
+      height: 6.0rem; }
       .swiper-container .swiper-slide.swiper-slide7 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide7 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 4rem;
-          width: 5.18rem;
-          z-index: 100;
-          transform: rotateY(180deg); }
+          right: -2rem;
+          width: 5.18rem; }
         .swiper-container .swiper-slide.swiper-slide7 .man-item img.img5 {
-          bottom: 0;
-          left: 4rem;
-          width: 4.11rem;
-          z-index: 101; }
+          bottom: -0.5rem;
+          right: -1rem;
+          width: 4.11rem; }
     .swiper-container .swiper-slide.swiper-slide8 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
@@ -487,48 +529,29 @@ img {
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide8 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.18rem;
           color: #ffc628;
           padding-left: 0.25rem; }
-      .swiper-container .swiper-slide.swiper-slide8 .container-bg ul {
+      .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show {
         width: 76%;
-        margin: 0 auto; }
-        .swiper-container .swiper-slide.swiper-slide8 .container-bg ul li {
-          height: 0.8rem;
-          width: 100%;
-          margin-top: 0.3rem;
-          color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
-          text-align: center;
-          font-weight: bold; }
-          .swiper-container .swiper-slide.swiper-slide8 .container-bg ul li.item1 {
-            background: url("./../images/li-bg.png") no-repeat;
-            background-position: 0 0;
-            background-size: 100% auto; }
-      .swiper-container .swiper-slide.swiper-slide8 .container-bg p {
-        width: 76%;
-        margin: 0.2rem auto 0;
-        color: #ffc628;
-        line-height: 2.5;
-        font-size: 0.25rem; }
-    .swiper-container .swiper-slide.swiper-slide8 .man-item {
-      position: absolute;
-      bottom: 0; }
-      .swiper-container .swiper-slide.swiper-slide8 .man-item img {
-        display: inline-block;
-        position: absolute; }
-        .swiper-container .swiper-slide.swiper-slide8 .man-item img.img2 {
-          bottom: -1.5rem;
-          left: 4rem;
-          width: 5.18rem;
-          z-index: 100;
-          transform: rotateY(180deg); }
-        .swiper-container .swiper-slide.swiper-slide8 .man-item img.img5 {
-          bottom: 0;
-          left: 4rem;
-          width: 4.11rem;
-          z-index: 101; }
+        margin: 0.2rem auto;
+        position: relative; }
+        .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img {
+          border: 0.1rem solid #ffc628;
+          box-sizing: border-box;
+          display: inline-block; }
+          .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img1 {
+            width: 48%;
+            margin-right: 3%; }
+          .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img2 {
+            width: 48%; }
+          .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img3 {
+            width: 100%; }
+          .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img4 {
+            width: 48%;
+            margin-right: 3%; }
+          .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img5 {
+            width: 48%; }
     .swiper-container .swiper-slide.swiper-slide9 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
@@ -545,49 +568,40 @@ img {
           font-size: 0.25rem;
           color: #ffc628;
           padding-left: 0.25rem; }
-      .swiper-container .swiper-slide.swiper-slide9 .container-bg ul {
-        width: 76%;
-        margin: 0.2rem auto; }
-        .swiper-container .swiper-slide.swiper-slide9 .container-bg ul li {
-          width: 100%;
-          border: 0.1rem solid #ffc628;
-          box-sizing: border-box;
-          margin-top: 0.5rem; }
-          .swiper-container .swiper-slide.swiper-slide9 .container-bg ul li img {
-            width: 100%; }
-    .swiper-container .swiper-slide.swiper-slide10 .container-bg {
-      background: url("./../images/con-bg.png") no-repeat;
-      width: 88%;
-      height: 11.7rem;
-      background-size: 100% 100%;
-      margin: 0.69rem auto 0;
-      overflow: hidden; }
-      .swiper-container .swiper-slide.swiper-slide10 .container-bg h2 {
-        color: #ffc628;
-        font-size: 0.5rem;
-        width: 76%;
-        margin: 0.2rem auto; }
-        .swiper-container .swiper-slide.swiper-slide10 .container-bg h2 span {
-          font-size: 0.25rem;
-          color: #ffc628;
-          padding-left: 0.25rem; }
-      .swiper-container .swiper-slide.swiper-slide10 .container-bg form input {
-        height: 0.6rem;
+      .swiper-container .swiper-slide.swiper-slide9 .container-bg form input {
         width: 70%;
         display: block;
         margin: 0 auto;
         font-size: 0.4rem;
         color: #000000;
-        padding: 0.2rem 0.1rem; }
-        .swiper-container .swiper-slide.swiper-slide10 .container-bg form input::-webkit-input-placeholder {
+        padding: 0.2rem 0.2rem;
+        border: 1px solid #ffc628;
+        margin-top: 0.1rem;
+        box-sizing: border-box; }
+        .swiper-container .swiper-slide.swiper-slide9 .container-bg form input.sub-btn {
+          line-height: 1;
+          background: url("./../images/li-bg.png") no-repeat;
+          background-size: 100% auto; }
+        .swiper-container .swiper-slide.swiper-slide9 .container-bg form input::-webkit-input-placeholder {
           /* WebKit browsers */
-          color: red; }
-        .swiper-container .swiper-slide.swiper-slide10 .container-bg form input:-moz-placeholder {
+          color: #000000; }
+        .swiper-container .swiper-slide.swiper-slide9 .container-bg form input:-moz-placeholder {
           /* Mozilla Firefox 4 to 18 */
-          color: red; }
-        .swiper-container .swiper-slide.swiper-slide10 .container-bg form input::-moz-placeholder {
+          color: #000000; }
+        .swiper-container .swiper-slide.swiper-slide9 .container-bg form input::-moz-placeholder {
           /* Mozilla Firefox 19+ */
-          color: red; }
-        .swiper-container .swiper-slide.swiper-slide10 .container-bg form input:-ms-input-placeholder {
+          color: #000000; }
+        .swiper-container .swiper-slide.swiper-slide9 .container-bg form input:-ms-input-placeholder {
           /* Internet Explorer 10+ */
-          color: red; }
+          color: #000000; }
+      .swiper-container .swiper-slide.swiper-slide9 .container-bg #allmap {
+        width: 70%;
+        margin: 0.2rem auto 0;
+        height: 2.80rem; }
+      .swiper-container .swiper-slide.swiper-slide9 .container-bg p {
+        font-size: 0.25rem;
+        text-align: center;
+        color: #ffc628;
+        width: 70%;
+        line-height: 2;
+        margin: 0.2rem auto; }
