@@ -108,10 +108,30 @@ img {
     width: 100%;
     height: 100%;
     background: #fff;
+    .loading {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: url(../images/loading.gif) no-repeat 60% 40% #f9b92e;
+        background-size: 7.96875rem 6.40625rem;
+        z-index: 999999;
+        color: #fff;
+        font-size: 1.09rem;
+        p {
+            text-align: center;
+            width: 100%;
+            position: absolute;
+            font-family: helvetica "微软雅黑";
+            top: 40%;
+            transform: translateY(4rem);
+        }
+    }
     .audio_btn {
         position: fixed;
-        width: 35px;
-        height: 35px;
+        width: 0.81rem;
+        height: 0.81rem;
         top: 20px;
         right: 20px;
         background: url(./../images/normalMusic.svg) no-repeat;
@@ -147,7 +167,7 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.5rem auto 0;
                 overflow: hidden;
@@ -156,30 +176,30 @@ img {
                     background: url('./../images/content-border.png') no-repeat center;
                     margin: 0 auto;
                     background-size: 90% 80%;
-                    height: 6.83rem;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
+                    height: 10rem;
+                    overflow: hidden;
                     h2 {
                         color: #F7D34C;
                         font-weight: bold;
-                        font-size: 0.50rem;
+                        font-size: 0.80rem;
                         text-align: center;
+                        margin-top: 0.5rem;
                     }
                     .img-item {
+                        margin-top: 0.5rem;
                         .item-row {
                             text-align: center;
-                            height: 1.20rem;
+                            // height: 1.50rem;
                             img {
-                                width: 1.20rem;
-                                height: 1.20rem;
+                                width: 2.0rem;
+                                height: 2.0rem;
                                 display: inline-block;
                             }
                         }
                     }
                     h3 {
                         color: #F7D34C;
-                        font-size: 0.30rem;
+                        font-size: 0.40rem;
                         text-align: center;
                     }
                 }
@@ -188,36 +208,36 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 4.5rem;
+                height: 8rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img1 {
-                        // bottom: -2.5rem;
+                        bottom: -2rem;
                         left: -1rem;
-                        width: 4.18rem;
+                        width: 5rem;
                     }
                     &.img2 {
-                        // bottom: -2.5rem;
-                        left: -0.2rem;
-                        width: 5rem;
+                        bottom: -2rem;
+                        left: 0.2rem;
+                        width: 6rem;
                         z-index: 100;
                     }
                     &.img3 {
-                        // bottom: -2.5rem;
-                        right: -0.8rem;
-                        width: 5.37rem;
+                        bottom: -3.0rem;
+                        right: 0;
+                        width: 6.6rem;
                         z-index: 99;
                     }
                     &.img4 {
-                        // bottom: -3.5rem;
+                        bottom: -2.0rem;
                         right: -2.2rem;
-                        width: 5rem;
+                        width: 6rem;
                     }
                     &.img5 {
-                        bottom: 0;
+                        bottom: -0.5rem;
                         // left: 0.5rem;
-                        width: 4.11rem;
+                        width: 4rem;
                         z-index: 101;
                     }
                 }
@@ -227,17 +247,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.70rem;
                     width: 84%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.30rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -245,7 +265,7 @@ img {
                 div {
                     width: 84%;
                     margin: 0 auto;
-                    height: 2.18rem;
+                    height: 3.18rem;
                     overflow: hidden;
                     border: 1px solid rgb(255, 198, 40);
                     img {
@@ -253,7 +273,7 @@ img {
                     }
                 }
                 p {
-                    font-size: 0.28rem;
+                    font-size: 0.40rem;
                     text-indent: 0.5rem;
                     width: 84%;
                     margin: 0 auto;
@@ -267,36 +287,36 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 4.5rem;
+                height: 8rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img1 {
-                        // bottom: -2.5rem;
+                        bottom: -3rem;
                         left: -1rem;
-                        width: 4.18rem;
+                        width: 5rem;
                     }
                     &.img2 {
-                        // bottom: -2.5rem;
-                        left: -0.2rem;
-                        width: 5rem;
+                        bottom: -3rem;
+                        left: 0.2rem;
+                        width: 6rem;
                         z-index: 100;
                     }
                     &.img3 {
-                        // bottom: -2.5rem;
-                        right: -0.8rem;
-                        width: 5.37rem;
+                        bottom: -4.0rem;
+                        right: 0;
+                        width: 6.6rem;
                         z-index: 99;
                     }
                     &.img4 {
-                        // bottom: -3.5rem;
+                        bottom: -3.0rem;
                         right: -2.2rem;
-                        width: 5rem;
+                        width: 6rem;
                     }
                     &.img5 {
                         bottom: 0;
                         // left: 0.5rem;
-                        width: 4.11rem;
+                        width: 4rem;
                         z-index: 101;
                     }
                 }
@@ -306,17 +326,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.2rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -325,12 +345,12 @@ img {
                     width: 76%;
                     margin: 0 auto;
                     li {
-                        height: 0.8rem;
+                        height: 1.2rem;
                         width: 100%;
                         margin-top: 0.3rem;
                         color: #000000;
-                        font-size: 0.4rem;
-                        line-height: 0.8rem;
+                        font-size: 0.6rem;
+                        line-height: 1.2rem;
                         text-align: center;
                         font-weight: bold;
                         &.item1 {
@@ -360,36 +380,36 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 4.5rem;
+                height: 8rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img1 {
-                        // bottom: -2.5rem;
+                        bottom: -2rem;
                         left: -1rem;
-                        width: 4.18rem;
+                        width: 5rem;
                     }
                     &.img2 {
-                        // bottom: -2.5rem;
-                        left: -0.2rem;
-                        width: 5rem;
+                        bottom: -2rem;
+                        left: 0.2rem;
+                        width: 6rem;
                         z-index: 100;
                     }
                     &.img3 {
-                        // bottom: -2.5rem;
-                        right: -0.8rem;
-                        width: 5.37rem;
+                        bottom: -3.0rem;
+                        right: 0;
+                        width: 6.6rem;
                         z-index: 99;
                     }
                     &.img4 {
-                        // bottom: -3.5rem;
+                        bottom: -2.0rem;
                         right: -2.2rem;
-                        width: 5rem;
+                        width: 6rem;
                     }
                     &.img5 {
                         bottom: 0;
                         // left: 0.5rem;
-                        width: 4.11rem;
+                        width: 6rem;
                         z-index: 101;
                     }
                 }
@@ -399,17 +419,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.20rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -418,12 +438,12 @@ img {
                     width: 76%;
                     margin: 0 auto;
                     li {
-                        height: 0.8rem;
+                        height: 1.2rem;
                         width: 100%;
                         margin-top: 0.3rem;
                         color: #000000;
-                        font-size: 0.4rem;
-                        line-height: 0.8rem;
+                        font-size: 0.6rem;
+                        line-height: 1.2rem;
                         text-align: center;
                         font-weight: bold;
                         &.item1 {
@@ -438,7 +458,7 @@ img {
                     margin: 0.2rem auto 0;
                     color: rgb(255, 198, 40);
                     line-height: 2.5;
-                    font-size: 0.24rem;
+                    font-size: 0.35rem;
                     position: relative;
                     z-index: 999;
                 }
@@ -447,14 +467,14 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 6.0rem;
+                height: 8.0rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img2 {
-                        // bottom: -0.5rem;
+                        bottom: -1.5rem;
                         right: -2rem;
-                        width: 5.18rem;
+                        width: 6rem;
                         // z-index: 100;
                     }
                     &.img5 {
@@ -470,17 +490,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.20rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -489,12 +509,12 @@ img {
                     width: 76%;
                     margin: 0 auto;
                     li {
-                        height: 0.8rem;
+                        height: 1.2rem;
                         width: 100%;
                         margin-top: 0.3rem;
                         color: #000000;
-                        font-size: 0.4rem;
-                        line-height: 0.8rem;
+                        font-size: 0.6rem;
+                        line-height: 1.2rem;
                         text-align: center;
                         font-weight: bold;
                         &.item1 {
@@ -509,7 +529,7 @@ img {
                     margin: 0.2rem auto 0;
                     color: rgb(255, 198, 40);
                     line-height: 2.5;
-                    font-size: 0.24rem;
+                    font-size: 0.35rem;
                     position: relative;
                     z-index: 999;
                 }
@@ -518,13 +538,14 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 6.0rem;
+                height: 8.0rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img2 {
+                        bottom: -2rem;
                         right: -2rem;
-                        width: 5.18rem;
+                        width: 6rem;
                     }
                     &.img5 {
                         bottom: -0.5rem;
@@ -539,17 +560,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.20rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -558,12 +579,12 @@ img {
                     width: 76%;
                     margin: 0 auto;
                     li {
-                        height: 0.8rem;
+                        height: 1.2rem;
                         width: 100%;
                         margin-top: 0.3rem;
                         color: #000000;
-                        font-size: 0.4rem;
-                        line-height: 0.8rem;
+                        font-size: 0.6rem;
+                        line-height: 1.2rem;
                         text-align: center;
                         font-weight: bold;
                         &.item1 {
@@ -578,7 +599,7 @@ img {
                     margin: 0.2rem auto 0;
                     color: rgb(255, 198, 40);
                     line-height: 2.5;
-                    font-size: 0.24rem;
+                    font-size: 0.35rem;
                     position: relative;
                     z-index: 999;
                 }
@@ -587,13 +608,14 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 6.0rem;
+                height: 8.0rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img2 {
+                        bottom: -3rem;
                         right: -2rem;
-                        width: 5.18rem;
+                        width: 6rem;
                     }
                     &.img5 {
                         bottom: -0.5rem;
@@ -608,17 +630,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.20rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -627,12 +649,12 @@ img {
                     width: 76%;
                     margin: 0 auto;
                     li {
-                        height: 0.8rem;
+                        height: 1.2rem;
                         width: 100%;
                         margin-top: 0.3rem;
                         color: #000000;
-                        font-size: 0.4rem;
-                        line-height: 0.8rem;
+                        font-size: 0.6rem;
+                        line-height: 1.2rem;
                         text-align: center;
                         font-weight: bold;
                         &.item1 {
@@ -647,7 +669,7 @@ img {
                     margin: 0.2rem auto 0;
                     color: rgb(255, 198, 40);
                     line-height: 2.5;
-                    font-size: 0.24rem;
+                    font-size: 0.35rem;
                     position: relative;
                     z-index: 100000;
                 }
@@ -656,13 +678,14 @@ img {
                 position: absolute;
                 bottom: 0;
                 width: 100%;
-                height: 6.0rem;
+                height: 8.0rem;
                 img {
                     display: inline-block;
                     position: absolute;
                     &.img2 {
+                        bottom: -2rem;
                         right: -2rem;
-                        width: 5.18rem;
+                        width: 6rem;
                     }
                     &.img5 {
                         bottom: -0.5rem;
@@ -677,17 +700,17 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.18rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
@@ -703,20 +726,25 @@ img {
                         // position: absolute;
                         &.img1 {
                             width: 48%;
+                            height: 3rem;
                             margin-right: 3%;
                         }
                         &.img2 {
                             width: 48%;
+                            height: 3rem;
                         }
                         &.img3 {
                             width: 100%;
+                            height: 4rem;
                         }
                         &.img4 {
                             width: 48%;
+                            height: 3rem;
                             margin-right: 3%;
                         }
                         &.img5 {
                             width: 48%;
+                            height: 3rem;
                         }
                     }
                 }
@@ -726,31 +754,31 @@ img {
             .container-bg {
                 background: url('./../images/con-bg.png') no-repeat;
                 width: 88%;
-                height: 11.7rem;
+                height: 90%;
                 background-size: 100% 100%;
                 margin: 0.69rem auto 0;
                 overflow: hidden;
                 h2 {
                     color: rgb(255, 198, 40);
-                    font-size: 0.5rem;
+                    font-size: 0.7rem;
                     width: 76%;
                     margin: 0.2rem auto;
                     span {
-                        font-size: 0.25rem;
+                        font-size: 0.32rem;
                         color: rgb(255, 198, 40);
                         padding-left: 0.25rem;
                     }
                 }
                 form {
                     input {
-                        width: 70%;
+                        width: 74%;
                         display: block;
                         margin: 0 auto;
-                        font-size: 0.4rem;
+                        font-size: 0.5rem;
                         color: #000000;
                         padding: 0.2rem 0.2rem;
                         border: 1px solid rgb(255, 198, 40);
-                        margin-top: 0.1rem;
+                        margin-top: 0.2rem;
                         box-sizing: border-box;
                         &.sub-btn {
                             line-height: 1;
@@ -776,12 +804,12 @@ img {
                     }
                 }
                 #allmap {
-                    width: 70%;
+                    width: 74%;
                     margin: 0.2rem auto 0;
-                    height: 2.80rem;
+                    height: 4rem;
                 }
                 p {
-                    font-size: 0.25rem;
+                    font-size: 0.34rem;
                     text-align: center;
                     color: rgb(255, 198, 40);
                     width: 70%;

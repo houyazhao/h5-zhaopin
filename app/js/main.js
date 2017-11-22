@@ -57,4 +57,32 @@ $("#audioBtn").click(function() {
         Audio.play();
         $(this).addClass('rotate');
     }
-})
+});
+var loading = document.querySelector(".loading");
+var loadingProcess = loading.getElementsByTagName("p")[0];
+var picArr = [
+    "images/arrow.png", "images/bg.png", "images/con-bg.png", "images/content-border.png", "images/deng-img.png", "images/dynamic.gif", "images/img5.png", "images/lai-img.png", "images/li-bg.png", "images/man1.png", "images/man2.png", "images/man3.png", "images/man1.png", "images/man21.png", "images/ni-img.png", "images/normalMusic.svg", "images/show1.jpg", "images/show2.jpg", "images/zhi-img.png"
+];
+var img = new Image();
+var sum = picArr.length;
+//console.log( picArr[40] ); 
+var now = 0;
+loadImg();
+
+function loadImg() {
+    img.src = picArr[now];
+
+    function go() {
+        now++;
+        //console.log(now);
+        loadingProcess.innerHTML = parseInt(now / sum * 100) + "%";
+        if (now < picArr.length) {
+            loadImg()
+        } else {
+            //console.log("全部加载完成");
+            loading.style.display = "none";
+        }
+    }
+    img.onerror = go;
+    img.onload = go;
+}

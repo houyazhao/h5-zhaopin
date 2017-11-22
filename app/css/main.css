@@ -1,3 +1,4 @@
+@charset "UTF-8";
 body,
 html {
   width: 100%;
@@ -78,10 +79,28 @@ img {
   width: 100%;
   height: 100%;
   background: #fff; }
+  .swiper-container .loading {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: url(../images/loading.gif) no-repeat 60% 40% #f9b92e;
+    background-size: 7.96875rem 6.40625rem;
+    z-index: 999999;
+    color: #fff;
+    font-size: 1.09rem; }
+    .swiper-container .loading p {
+      text-align: center;
+      width: 100%;
+      position: absolute;
+      font-family: helvetica "微软雅黑";
+      top: 40%;
+      transform: translateY(4rem); }
   .swiper-container .audio_btn {
     position: fixed;
-    width: 35px;
-    height: 35px;
+    width: 0.81rem;
+    height: 0.81rem;
     top: 20px;
     right: 20px;
     background: url(./../images/normalMusic.svg) no-repeat;
@@ -112,7 +131,7 @@ img {
     .swiper-container .swiper-slide.swiper-slide1 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.5rem auto 0;
       overflow: hidden; }
@@ -121,78 +140,82 @@ img {
         background: url("./../images/content-border.png") no-repeat center;
         margin: 0 auto;
         background-size: 90% 80%;
-        height: 6.83rem;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around; }
+        height: 10rem;
+        overflow: hidden; }
         .swiper-container .swiper-slide.swiper-slide1 .container-bg .content h2 {
           color: #F7D34C;
           font-weight: bold;
-          font-size: 0.50rem;
-          text-align: center; }
-        .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row {
+          font-size: 0.80rem;
           text-align: center;
-          height: 1.20rem; }
-          .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row img {
-            width: 1.20rem;
-            height: 1.20rem;
-            display: inline-block; }
+          margin-top: 0.5rem; }
+        .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item {
+          margin-top: 0.5rem; }
+          .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row {
+            text-align: center; }
+            .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item .item-row img {
+              width: 2.0rem;
+              height: 2.0rem;
+              display: inline-block; }
         .swiper-container .swiper-slide.swiper-slide1 .container-bg .content h3 {
           color: #F7D34C;
-          font-size: 0.30rem;
+          font-size: 0.40rem;
           text-align: center; }
     .swiper-container .swiper-slide.swiper-slide1 .man-item {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 4.5rem; }
+      height: 8rem; }
       .swiper-container .swiper-slide.swiper-slide1 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img1 {
+          bottom: -2rem;
           left: -1rem;
-          width: 4.18rem; }
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img2 {
-          left: -0.2rem;
-          width: 5rem;
+          bottom: -2rem;
+          left: 0.2rem;
+          width: 6rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img3 {
-          right: -0.8rem;
-          width: 5.37rem;
+          bottom: -3.0rem;
+          right: 0;
+          width: 6.6rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img4 {
+          bottom: -2.0rem;
           right: -2.2rem;
-          width: 5rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide1 .man-item img.img5 {
-          bottom: 0;
-          width: 4.11rem;
+          bottom: -0.5rem;
+          width: 4rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide2 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide2 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.70rem;
         width: 84%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide2 .container-bg h2 span {
-          font-size: 0.30rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide2 .container-bg div {
         width: 84%;
         margin: 0 auto;
-        height: 2.18rem;
+        height: 3.18rem;
         overflow: hidden;
         border: 1px solid #ffc628; }
         .swiper-container .swiper-slide.swiper-slide2 .container-bg div img {
           width: 100%; }
       .swiper-container .swiper-slide.swiper-slide2 .container-bg p {
-        font-size: 0.28rem;
+        font-size: 0.40rem;
         text-indent: 0.5rem;
         width: 84%;
         margin: 0 auto;
@@ -204,54 +227,58 @@ img {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 4.5rem; }
+      height: 8rem; }
       .swiper-container .swiper-slide.swiper-slide2 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img1 {
+          bottom: -3rem;
           left: -1rem;
-          width: 4.18rem; }
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img2 {
-          left: -0.2rem;
-          width: 5rem;
+          bottom: -3rem;
+          left: 0.2rem;
+          width: 6rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img3 {
-          right: -0.8rem;
-          width: 5.37rem;
+          bottom: -4.0rem;
+          right: 0;
+          width: 6.6rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img4 {
+          bottom: -3.0rem;
           right: -2.2rem;
-          width: 5rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide2 .man-item img.img5 {
           bottom: 0;
-          width: 4.11rem;
+          width: 4rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide3 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide3 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide3 .container-bg h2 span {
-          font-size: 0.2rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide3 .container-bg ul {
         width: 76%;
         margin: 0 auto; }
         .swiper-container .swiper-slide.swiper-slide3 .container-bg ul li {
-          height: 0.8rem;
+          height: 1.2rem;
           width: 100%;
           margin-top: 0.3rem;
           color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
+          font-size: 0.6rem;
+          line-height: 1.2rem;
           text-align: center;
           font-weight: bold; }
           .swiper-container .swiper-slide.swiper-slide3 .container-bg ul li.item1 {
@@ -274,54 +301,58 @@ img {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 4.5rem; }
+      height: 8rem; }
       .swiper-container .swiper-slide.swiper-slide3 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img1 {
+          bottom: -2rem;
           left: -1rem;
-          width: 4.18rem; }
+          width: 5rem; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img2 {
-          left: -0.2rem;
-          width: 5rem;
+          bottom: -2rem;
+          left: 0.2rem;
+          width: 6rem;
           z-index: 100; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img3 {
-          right: -0.8rem;
-          width: 5.37rem;
+          bottom: -3.0rem;
+          right: 0;
+          width: 6.6rem;
           z-index: 99; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img4 {
+          bottom: -2.0rem;
           right: -2.2rem;
-          width: 5rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide3 .man-item img.img5 {
           bottom: 0;
-          width: 4.11rem;
+          width: 6rem;
           z-index: 101; }
     .swiper-container .swiper-slide.swiper-slide4 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide4 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide4 .container-bg h2 span {
-          font-size: 0.20rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide4 .container-bg ul {
         width: 76%;
         margin: 0 auto; }
         .swiper-container .swiper-slide.swiper-slide4 .container-bg ul li {
-          height: 0.8rem;
+          height: 1.2rem;
           width: 100%;
           margin-top: 0.3rem;
           color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
+          font-size: 0.6rem;
+          line-height: 1.2rem;
           text-align: center;
           font-weight: bold; }
           .swiper-container .swiper-slide.swiper-slide4 .container-bg ul li.item1 {
@@ -333,20 +364,21 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.24rem;
+        font-size: 0.35rem;
         position: relative;
         z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide4 .man-item {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 6.0rem; }
+      height: 8.0rem; }
       .swiper-container .swiper-slide.swiper-slide4 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide4 .man-item img.img2 {
+          bottom: -1.5rem;
           right: -2rem;
-          width: 5.18rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide4 .man-item img.img5 {
           bottom: -0.5rem;
           right: -1rem;
@@ -354,29 +386,29 @@ img {
     .swiper-container .swiper-slide.swiper-slide5 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide5 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide5 .container-bg h2 span {
-          font-size: 0.20rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide5 .container-bg ul {
         width: 76%;
         margin: 0 auto; }
         .swiper-container .swiper-slide.swiper-slide5 .container-bg ul li {
-          height: 0.8rem;
+          height: 1.2rem;
           width: 100%;
           margin-top: 0.3rem;
           color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
+          font-size: 0.6rem;
+          line-height: 1.2rem;
           text-align: center;
           font-weight: bold; }
           .swiper-container .swiper-slide.swiper-slide5 .container-bg ul li.item1 {
@@ -388,20 +420,21 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.24rem;
+        font-size: 0.35rem;
         position: relative;
         z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide5 .man-item {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 6.0rem; }
+      height: 8.0rem; }
       .swiper-container .swiper-slide.swiper-slide5 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide5 .man-item img.img2 {
+          bottom: -2rem;
           right: -2rem;
-          width: 5.18rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide5 .man-item img.img5 {
           bottom: -0.5rem;
           right: -1rem;
@@ -409,29 +442,29 @@ img {
     .swiper-container .swiper-slide.swiper-slide6 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide6 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide6 .container-bg h2 span {
-          font-size: 0.20rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide6 .container-bg ul {
         width: 76%;
         margin: 0 auto; }
         .swiper-container .swiper-slide.swiper-slide6 .container-bg ul li {
-          height: 0.8rem;
+          height: 1.2rem;
           width: 100%;
           margin-top: 0.3rem;
           color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
+          font-size: 0.6rem;
+          line-height: 1.2rem;
           text-align: center;
           font-weight: bold; }
           .swiper-container .swiper-slide.swiper-slide6 .container-bg ul li.item1 {
@@ -443,20 +476,21 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.24rem;
+        font-size: 0.35rem;
         position: relative;
         z-index: 999; }
     .swiper-container .swiper-slide.swiper-slide6 .man-item {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 6.0rem; }
+      height: 8.0rem; }
       .swiper-container .swiper-slide.swiper-slide6 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide6 .man-item img.img2 {
+          bottom: -3rem;
           right: -2rem;
-          width: 5.18rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide6 .man-item img.img5 {
           bottom: -0.5rem;
           right: -1rem;
@@ -464,29 +498,29 @@ img {
     .swiper-container .swiper-slide.swiper-slide7 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide7 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide7 .container-bg h2 span {
-          font-size: 0.20rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide7 .container-bg ul {
         width: 76%;
         margin: 0 auto; }
         .swiper-container .swiper-slide.swiper-slide7 .container-bg ul li {
-          height: 0.8rem;
+          height: 1.2rem;
           width: 100%;
           margin-top: 0.3rem;
           color: #000000;
-          font-size: 0.4rem;
-          line-height: 0.8rem;
+          font-size: 0.6rem;
+          line-height: 1.2rem;
           text-align: center;
           font-weight: bold; }
           .swiper-container .swiper-slide.swiper-slide7 .container-bg ul li.item1 {
@@ -498,20 +532,21 @@ img {
         margin: 0.2rem auto 0;
         color: #ffc628;
         line-height: 2.5;
-        font-size: 0.24rem;
+        font-size: 0.35rem;
         position: relative;
         z-index: 100000; }
     .swiper-container .swiper-slide.swiper-slide7 .man-item {
       position: absolute;
       bottom: 0;
       width: 100%;
-      height: 6.0rem; }
+      height: 8.0rem; }
       .swiper-container .swiper-slide.swiper-slide7 .man-item img {
         display: inline-block;
         position: absolute; }
         .swiper-container .swiper-slide.swiper-slide7 .man-item img.img2 {
+          bottom: -2rem;
           right: -2rem;
-          width: 5.18rem; }
+          width: 6rem; }
         .swiper-container .swiper-slide.swiper-slide7 .man-item img.img5 {
           bottom: -0.5rem;
           right: -1rem;
@@ -519,17 +554,17 @@ img {
     .swiper-container .swiper-slide.swiper-slide8 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide8 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide8 .container-bg h2 span {
-          font-size: 0.18rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show {
@@ -542,41 +577,46 @@ img {
           display: inline-block; }
           .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img1 {
             width: 48%;
+            height: 3rem;
             margin-right: 3%; }
           .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img2 {
-            width: 48%; }
+            width: 48%;
+            height: 3rem; }
           .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img3 {
-            width: 100%; }
+            width: 100%;
+            height: 4rem; }
           .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img4 {
             width: 48%;
+            height: 3rem;
             margin-right: 3%; }
           .swiper-container .swiper-slide.swiper-slide8 .container-bg .img-show img.img5 {
-            width: 48%; }
+            width: 48%;
+            height: 3rem; }
     .swiper-container .swiper-slide.swiper-slide9 .container-bg {
       background: url("./../images/con-bg.png") no-repeat;
       width: 88%;
-      height: 11.7rem;
+      height: 90%;
       background-size: 100% 100%;
       margin: 0.69rem auto 0;
       overflow: hidden; }
       .swiper-container .swiper-slide.swiper-slide9 .container-bg h2 {
         color: #ffc628;
-        font-size: 0.5rem;
+        font-size: 0.7rem;
         width: 76%;
         margin: 0.2rem auto; }
         .swiper-container .swiper-slide.swiper-slide9 .container-bg h2 span {
-          font-size: 0.25rem;
+          font-size: 0.32rem;
           color: #ffc628;
           padding-left: 0.25rem; }
       .swiper-container .swiper-slide.swiper-slide9 .container-bg form input {
-        width: 70%;
+        width: 74%;
         display: block;
         margin: 0 auto;
-        font-size: 0.4rem;
+        font-size: 0.5rem;
         color: #000000;
         padding: 0.2rem 0.2rem;
         border: 1px solid #ffc628;
-        margin-top: 0.1rem;
+        margin-top: 0.2rem;
         box-sizing: border-box; }
         .swiper-container .swiper-slide.swiper-slide9 .container-bg form input.sub-btn {
           line-height: 1;
@@ -595,11 +635,11 @@ img {
           /* Internet Explorer 10+ */
           color: #000000; }
       .swiper-container .swiper-slide.swiper-slide9 .container-bg #allmap {
-        width: 70%;
+        width: 74%;
         margin: 0.2rem auto 0;
-        height: 2.80rem; }
+        height: 4rem; }
       .swiper-container .swiper-slide.swiper-slide9 .container-bg p {
-        font-size: 0.25rem;
+        font-size: 0.34rem;
         text-align: center;
         color: #ffc628;
         width: 70%;
