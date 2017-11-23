@@ -204,5 +204,59 @@
 <!--build:js js/index.min.js -->
 <script src="./js/main.js"></script>
 <!-- endbuild -->
+<script type="text/javascript" src="http://res.wx.qq.com/open/js/jweixin-1.0.0.js"></script>
+<script>
+    var shareUrl = "测试"; //分享的URL地址
+    var shareTitle = "测试"; //分享的标题
+    var shareImage = "https://houyazhao.github.io/images/avatar.gif"; //分享的图片地址
+    var shareDesc = "测试"; //分享的描述信息
+    var url = location.href.split('#')[0];
+    console.log(url);
+    $.ajax({
+        type: "get",
+        url: "http://58.215.120.187:24411/wechat/sign",
+        async: true,
+        data: {
+            "url": url
+        },
+        success: function(data) {
+            console.log(location.href.split('#')[0]);
+            console.log(data);
+            wx.config({
+                debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+                appId: data.appid, // 必填，公众号的唯一标识
+                timestamp: data.timestamp, // 必填，生成签名的时间戳
+                nonceStr: data.nonceStr, // 必填，生成签名的随机串
+                signature: data.signature, // 必填，签名，见附录1
+                jsApiList: [ //需要使用的JS接口列表,分享默认这几个，如果有其他的功能比如图片上传之类的，需要添加对应api进来
+                    'checkJsApi',
+                    'onMenuShareTimeline',
+                    'onMenuShareAppMessage',
+                    'onMenuShareQQ',
+                    'onMenuShareWeibo'
+                ]
+            });
+        }
+    });
+    window.share_config = {
+        "share": {
+            "imgUrl": shareImage, //分享图，默认当相对路径处理，所以使用绝对路径的的话，“http://”协议前缀必须在。
+            "desc": shareDesc, //摘要,如果分享到朋友圈的话，不显示摘要。
+            "title": shareTitle, //分享卡片标题
+            "link": window.location.href, //分享出去后的链接，这里可以将链接设置为另一个页面。
+            "success": function() { //分享成功后的回调函数
+            },
+            'cancel': function() {
+                // 用户取消分享后执行的回调函数
+            }
+        }
+    };
+    wx.ready(function() {
+        wx.onMenuShareAppMessage(share_config.share); //分享给好友
+        wx.onMenuShareTimeline(share_config.share); //分享到朋友圈
+        wx.onMenuShareQQ(share_config.share); //分享给手机QQ
+        wx.onMenuShareWeibo(share_config.share);
+    });
+</script>
 
 </html>
