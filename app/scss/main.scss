@@ -114,7 +114,7 @@ img {
         position: absolute;
         left: 0;
         top: 0;
-        background: url(../images/loading.gif) no-repeat 60% 40% #f9b92e;
+        background: url(../images/loading.svg) no-repeat 60% 40% #f9b92e;
         background-size: 7.96875rem 6.40625rem;
         z-index: 999999;
         color: #fff;
@@ -130,8 +130,8 @@ img {
     }
     .audio_btn {
         position: fixed;
-        width: 0.81rem;
-        height: 0.81rem;
+        width: 0.6rem;
+        height: 0.6rem;
         top: 20px;
         right: 20px;
         background: url(./../images/normalMusic.svg) no-repeat;
@@ -150,7 +150,7 @@ img {
         position: fixed;
         left: 50%;
         margin-left: -0.25rem;
-        bottom: 100px;
+        bottom: 50px;
         width: 0.5rem;
         height: 0.4rem;
         z-index: 999;
@@ -163,109 +163,140 @@ img {
         position: relative;
         background: url('./../images/bg.png') no-repeat left top;
         background-size: 100% 100%;
+        .container-bg {
+            background: url('./../images/con-bg.png') no-repeat;
+            width: 88%;
+            height: 92%;
+            background-size: 100% 100%;
+            margin: 5% auto 0;
+            overflow: hidden;
+            .content {
+                width: 88%;
+                background: url('./../images/content-border.png') no-repeat center;
+                margin: 0 auto;
+                background-size: 90% 80%;
+                height: 76%;
+                overflow: hidden;
+            }
+            .title {
+                color: rgb(255, 198, 40);
+                font-size: 0.46rem;
+                width: 76%;
+                margin: 0.2rem auto 0;
+                span {
+                    font-size: 0.18rem;
+                    color: rgb(255, 198, 40);
+                    padding-left: 0.25rem;
+                }
+            }
+            ul {
+                width: 76%;
+                margin: 0 auto;
+                li {
+                    height: 0.7rem;
+                    width: 100%;
+                    margin-top: 0.1rem;
+                    color: #000000;
+                    font-size: 0.4rem;
+                    line-height: 0.7rem;
+                    text-align: center;
+                    font-weight: bold;
+                    &.item1 {
+                        background: url('./../images/li-bg.png') no-repeat;
+                        background-position: 0 0;
+                        background-size: 100% auto;
+                    }
+                    &.item2 {
+                        background: url('./../images/li-bg.png') no-repeat;
+                        background-position: 0 -0.8rem;
+                        background-size: 100% auto;
+                    }
+                    &.item3 {
+                        background: url('./../images/li-bg.png') no-repeat;
+                        background-position: 0 -1.6rem;
+                        background-size: 100% auto;
+                    }
+                    &.item4 {
+                        background: url('./../images/li-bg.png') no-repeat;
+                        background-position: 0 -2.4rem;
+                        background-size: 100% auto;
+                    }
+                }
+            }
+        }
+        .man-item {
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            height: 33.3%;
+            img {
+                display: inline-block;
+                position: absolute;
+                &.img1 {
+                    left: -0.5rem;
+                    width: 3rem;
+                }
+                &.img2 {
+                    left: 0.8rem;
+                    width: 3rem;
+                    z-index: 100;
+                }
+                &.img3 {
+                    right: 0.5rem;
+                    width: 3.5rem;
+                    z-index: 99;
+                }
+                &.img4 {
+                    right: -1.0rem;
+                    width: 3.5rem;
+                }
+                &.img5 {
+                    bottom: 0;
+                    width: 2rem;
+                    z-index: 101;
+                }
+            }
+        }
         &.swiper-slide1 {
             .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.5rem auto 0;
-                overflow: hidden;
                 .content {
-                    width: 88%;
-                    background: url('./../images/content-border.png') no-repeat center;
-                    margin: 0 auto;
-                    background-size: 90% 80%;
-                    height: 10rem;
-                    overflow: hidden;
                     h2 {
                         color: #F7D34C;
                         font-weight: bold;
                         font-size: 0.80rem;
+                        height: 0.8rem;
                         text-align: center;
-                        margin-top: 0.5rem;
+                        margin-top: 10%;
+                        img {
+                            height: 100%;
+                            display: inline-block;
+                        }
                     }
                     .img-item {
-                        margin-top: 0.5rem;
+                        margin-top: 10%;
                         .item-row {
                             text-align: center;
-                            // height: 1.50rem;
                             img {
-                                width: 2.0rem;
-                                height: 2.0rem;
+                                width: 1.2rem;
+                                height: 1.2rem;
                                 display: inline-block;
                             }
                         }
                     }
                     h3 {
                         color: #F7D34C;
-                        font-size: 0.40rem;
+                        font-size: 0.30rem;
                         text-align: center;
-                    }
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img1 {
-                        bottom: -2rem;
-                        left: -1rem;
-                        width: 5rem;
-                    }
-                    &.img2 {
-                        bottom: -2rem;
-                        left: 0.2rem;
-                        width: 6rem;
-                        z-index: 100;
-                    }
-                    &.img3 {
-                        bottom: -3.0rem;
-                        right: 0;
-                        width: 6.6rem;
-                        z-index: 99;
-                    }
-                    &.img4 {
-                        bottom: -2.0rem;
-                        right: -2.2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: -0.5rem;
-                        // left: 0.5rem;
-                        width: 4rem;
-                        z-index: 101;
                     }
                 }
             }
         }
         &.swiper-slide2 {
             .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.70rem;
-                    width: 84%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
                 div {
                     width: 84%;
                     margin: 0 auto;
-                    height: 3.18rem;
+                    height: 2.0rem;
                     overflow: hidden;
                     border: 1px solid rgb(255, 198, 40);
                     img {
@@ -273,478 +304,72 @@ img {
                     }
                 }
                 p {
-                    font-size: 0.40rem;
+                    font-size: 0.22rem;
                     text-indent: 0.5rem;
                     width: 84%;
                     margin: 0 auto;
                     color: rgb(255, 198, 40);
-                    line-height: 2;
+                    line-height: 1.5;
                     z-index: 200;
                     margin-top: 0.1rem;
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img1 {
-                        bottom: -3rem;
-                        left: -1rem;
-                        width: 5rem;
-                    }
-                    &.img2 {
-                        bottom: -3rem;
-                        left: 0.2rem;
-                        width: 6rem;
-                        z-index: 100;
-                    }
-                    &.img3 {
-                        bottom: -4.0rem;
-                        right: 0;
-                        width: 6.6rem;
-                        z-index: 99;
-                    }
-                    &.img4 {
-                        bottom: -3.0rem;
-                        right: -2.2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: 0;
-                        // left: 0.5rem;
-                        width: 4rem;
-                        z-index: 101;
-                    }
-                }
-            }
-        }
-        &.swiper-slide3 {
-            .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
-                ul {
-                    width: 76%;
-                    margin: 0 auto;
-                    li {
-                        height: 1.2rem;
-                        width: 100%;
-                        margin-top: 0.3rem;
-                        color: #000000;
-                        font-size: 0.6rem;
-                        line-height: 1.2rem;
-                        text-align: center;
-                        font-weight: bold;
-                        &.item1 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 0;
-                            background-size: 100% auto;
-                        }
-                        &.item2 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 -0.8rem;
-                            background-size: 100% auto;
-                        }
-                        &.item3 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 -1.6rem;
-                            background-size: 100% auto;
-                        }
-                        &.item4 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 -2.4rem;
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img1 {
-                        bottom: -2rem;
-                        left: -1rem;
-                        width: 5rem;
-                    }
-                    &.img2 {
-                        bottom: -2rem;
-                        left: 0.2rem;
-                        width: 6rem;
-                        z-index: 100;
-                    }
-                    &.img3 {
-                        bottom: -3.0rem;
-                        right: 0;
-                        width: 6.6rem;
-                        z-index: 99;
-                    }
-                    &.img4 {
-                        bottom: -2.0rem;
-                        right: -2.2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: 0;
-                        // left: 0.5rem;
-                        width: 6rem;
-                        z-index: 101;
-                    }
                 }
             }
         }
         &.swiper-slide4 {
             .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
-                ul {
-                    width: 76%;
-                    margin: 0 auto;
-                    li {
-                        height: 1.2rem;
-                        width: 100%;
-                        margin-top: 0.3rem;
-                        color: #000000;
-                        font-size: 0.6rem;
-                        line-height: 1.2rem;
-                        text-align: center;
-                        font-weight: bold;
-                        &.item1 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 0;
-                            background-size: 100% auto;
-                        }
-                    }
-                }
                 p {
                     width: 76%;
                     margin: 0.2rem auto 0;
                     color: rgb(255, 198, 40);
-                    line-height: 2.5;
-                    font-size: 0.35rem;
+                    line-height: 1.5;
+                    font-size: 0.20rem;
                     position: relative;
                     z-index: 999;
                 }
             }
             .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8.0rem;
                 img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img2 {
-                        bottom: -1.5rem;
-                        right: -2rem;
-                        width: 6rem;
-                        // z-index: 100;
-                    }
                     &.img5 {
-                        bottom: -0.5rem;
-                        right: -1rem;
-                        width: 4.11rem;
-                        // z-index: 101;
-                    }
-                }
-            }
-        }
-        &.swiper-slide5 {
-            .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
-                ul {
-                    width: 76%;
-                    margin: 0 auto;
-                    li {
-                        height: 1.2rem;
-                        width: 100%;
-                        margin-top: 0.3rem;
-                        color: #000000;
-                        font-size: 0.6rem;
-                        line-height: 1.2rem;
-                        text-align: center;
-                        font-weight: bold;
-                        &.item1 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 0;
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-                p {
-                    width: 76%;
-                    margin: 0.2rem auto 0;
-                    color: rgb(255, 198, 40);
-                    line-height: 2.5;
-                    font-size: 0.35rem;
-                    position: relative;
-                    z-index: 999;
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8.0rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img2 {
-                        bottom: -2rem;
-                        right: -2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: -0.5rem;
-                        right: -1rem;
-                        width: 4.11rem;
-                        // z-index: 101;
-                    }
-                }
-            }
-        }
-        &.swiper-slide6 {
-            .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
-                ul {
-                    width: 76%;
-                    margin: 0 auto;
-                    li {
-                        height: 1.2rem;
-                        width: 100%;
-                        margin-top: 0.3rem;
-                        color: #000000;
-                        font-size: 0.6rem;
-                        line-height: 1.2rem;
-                        text-align: center;
-                        font-weight: bold;
-                        &.item1 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 0;
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-                p {
-                    width: 76%;
-                    margin: 0.2rem auto 0;
-                    color: rgb(255, 198, 40);
-                    line-height: 2.5;
-                    font-size: 0.35rem;
-                    position: relative;
-                    z-index: 999;
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8.0rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img2 {
-                        bottom: -3rem;
-                        right: -2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: -0.5rem;
-                        right: -1rem;
-                        width: 4.11rem;
-                        // z-index: 101;
-                    }
-                }
-            }
-        }
-        &.swiper-slide7 {
-            .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
-                ul {
-                    width: 76%;
-                    margin: 0 auto;
-                    li {
-                        height: 1.2rem;
-                        width: 100%;
-                        margin-top: 0.3rem;
-                        color: #000000;
-                        font-size: 0.6rem;
-                        line-height: 1.2rem;
-                        text-align: center;
-                        font-weight: bold;
-                        &.item1 {
-                            background: url('./../images/li-bg.png') no-repeat;
-                            background-position: 0 0;
-                            background-size: 100% auto;
-                        }
-                    }
-                }
-                p {
-                    width: 76%;
-                    margin: 0.2rem auto 0;
-                    color: rgb(255, 198, 40);
-                    line-height: 2.5;
-                    font-size: 0.35rem;
-                    position: relative;
-                    z-index: 100000;
-                }
-            }
-            .man-item {
-                position: absolute;
-                bottom: 0;
-                width: 100%;
-                height: 8.0rem;
-                img {
-                    display: inline-block;
-                    position: absolute;
-                    &.img2 {
-                        bottom: -2rem;
-                        right: -2rem;
-                        width: 6rem;
-                    }
-                    &.img5 {
-                        bottom: -0.5rem;
-                        right: -1rem;
-                        width: 4.11rem;
-                        // z-index: 101;
+                        bottom: 0;
+                        right: -0.5rem;
+                        width: 2.5rem;
                     }
                 }
             }
         }
         &.swiper-slide8 {
             .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
                 .img-show {
                     width: 76%;
                     margin: 0.2rem auto;
                     position: relative;
                     img {
-                        border: 0.1rem solid rgb(255, 198, 40);
+                        border: 0.02rem solid rgb(255, 198, 40);
                         box-sizing: border-box;
-                        display: inline-block;
-                        // position: absolute;
+                        display: block;
+                        float: left;
+                        margin-top: 0.1rem;
                         &.img1 {
                             width: 48%;
-                            height: 3rem;
-                            margin-right: 3%;
+                            height: 1.6rem;
+                            margin-right: 2%;
                         }
                         &.img2 {
                             width: 48%;
-                            height: 3rem;
+                            height: 1.6rem;
                         }
                         &.img3 {
                             width: 100%;
-                            height: 4rem;
+                            height: 3rem;
                         }
                         &.img4 {
                             width: 48%;
-                            height: 3rem;
-                            margin-right: 3%;
+                            height: 1.6rem;
+                            margin-right: 2%;
                         }
                         &.img5 {
                             width: 48%;
-                            height: 3rem;
+                            height: 1.6rem;
                         }
                     }
                 }
@@ -752,33 +377,16 @@ img {
         }
         &.swiper-slide9 {
             .container-bg {
-                background: url('./../images/con-bg.png') no-repeat;
-                width: 88%;
-                height: 90%;
-                background-size: 100% 100%;
-                margin: 0.69rem auto 0;
-                overflow: hidden;
-                h2 {
-                    color: rgb(255, 198, 40);
-                    font-size: 0.7rem;
-                    width: 76%;
-                    margin: 0.2rem auto;
-                    span {
-                        font-size: 0.32rem;
-                        color: rgb(255, 198, 40);
-                        padding-left: 0.25rem;
-                    }
-                }
                 form {
                     input {
                         width: 74%;
                         display: block;
                         margin: 0 auto;
-                        font-size: 0.5rem;
+                        font-size: 0.34rem;
                         color: #000000;
-                        padding: 0.2rem 0.2rem;
+                        padding: 0.1rem 0.1rem;
                         border: 1px solid rgb(255, 198, 40);
-                        margin-top: 0.2rem;
+                        margin-top: 0.1rem;
                         box-sizing: border-box;
                         &.sub-btn {
                             line-height: 1;
@@ -806,15 +414,16 @@ img {
                 #allmap {
                     width: 74%;
                     margin: 0.2rem auto 0;
-                    height: 4rem;
+                    height: 2.4rem;
+                    overflow: hidden;
                 }
                 p {
-                    font-size: 0.34rem;
+                    font-size: 0.20rem;
                     text-align: center;
                     color: rgb(255, 198, 40);
                     width: 70%;
                     line-height: 2;
-                    margin: 0.2rem auto;
+                    margin: 0.1rem auto;
                 }
             }
         }

@@ -34,7 +34,7 @@ var mySwiper = new Swiper('.swiper-container', {
 });
 //百度地图
 var map = new BMap.Map("allmap");
-var point = new BMap.Point(120.181756, 30.29542);
+var point = new BMap.Point(120.181751, 30.295427);
 var marker = new BMap.Marker(point);
 map.addOverlay(marker);
 map.enableScrollWheelZoom(); //启用滚轮放大缩小，默认禁用
@@ -59,7 +59,7 @@ $("#audioBtn").click(function() {
     }
 });
 var loading = document.querySelector(".loading");
-var loadingProcess = loading.getElementsByTagName("p")[0];
+// var loadingProcess = loading.getElementsByTagName("p")[0];
 var picArr = [
     "images/arrow.png", "images/bg.png", "images/con-bg.png", "images/content-border.png", "images/deng-img.png", "images/dynamic.gif", "images/img5.png", "images/lai-img.png", "images/li-bg.png", "images/man1.png", "images/man2.png", "images/man3.png", "images/man1.png", "images/man21.png", "images/ni-img.png", "images/normalMusic.svg", "images/show1.jpg", "images/show2.jpg", "images/zhi-img.png"
 ];
@@ -75,7 +75,7 @@ function loadImg() {
     function go() {
         now++;
         //console.log(now);
-        loadingProcess.innerHTML = parseInt(now / sum * 100) + "%";
+        // loadingProcess.innerHTML = parseInt(now / sum * 100) + "%";
         if (now < picArr.length) {
             loadImg()
         } else {
