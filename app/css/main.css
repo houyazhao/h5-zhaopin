@@ -75,28 +75,29 @@ html {
 img {
   display: block; }
 
+.loading {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: url(../images/loading.svg) no-repeat 60% 40% #000000;
+  background-size: 7.96875rem 6.40625rem;
+  z-index: 999999;
+  color: #fff;
+  font-size: 1.09rem; }
+  .loading p {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    font-family: helvetica "微软雅黑";
+    top: 40%;
+    transform: translateY(4rem); }
+
 .swiper-container {
   width: 100%;
   height: 100%;
   background: #fff; }
-  .swiper-container .loading {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    left: 0;
-    top: 0;
-    background: url(../images/loading.svg) no-repeat 60% 40% #f9b92e;
-    background-size: 7.96875rem 6.40625rem;
-    z-index: 999999;
-    color: #fff;
-    font-size: 1.09rem; }
-    .swiper-container .loading p {
-      text-align: center;
-      width: 100%;
-      position: absolute;
-      font-family: helvetica "微软雅黑";
-      top: 40%;
-      transform: translateY(4rem); }
   .swiper-container .audio_btn {
     position: fixed;
     width: 0.6rem;
@@ -211,9 +212,10 @@ img {
       font-size: 0.80rem;
       height: 0.8rem;
       text-align: center;
+      line-height: 1;
       margin-top: 10%; }
       .swiper-container .swiper-slide.swiper-slide1 .container-bg .content h2 img {
-        height: 100%;
+        width: 50%;
         display: inline-block; }
     .swiper-container .swiper-slide.swiper-slide1 .container-bg .content .img-item {
       margin-top: 10%; }
